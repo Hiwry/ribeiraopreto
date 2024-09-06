@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descobrir Interruptores</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMM8F7j3fRoVSVfVT5f2/67KpBwbAKzNkUfz0z2" crossorigin="anonymous">
+</head>
+<body class="dark-mode">
+
+    <div class="container">
+        <h1>Desafio dos Interruptores</h1>
+        <p>
+            <strong>Lógica para resolver:</strong><br>
+            1. Ligue o <strong>interruptor 1</strong> e deixe-o ligado por alguns minutos.<br>
+            2. Desligue o <strong>interruptor 1</strong> e ligue o <strong>interruptor 2</strong>.<br>
+            3. Vá até a sala das lâmpadas:
+            <ul>
+                <li>A lâmpada que estiver <strong>acesa</strong> estará conectada ao <strong>interruptor 2</strong>.</li>
+                <li>A lâmpada que estiver <strong>quente, mas apagada</strong> estará conectada ao <strong>interruptor 1</strong>.</li>
+                <li>A lâmpada que estiver <strong>fria e apagada</strong> estará conectada ao <strong>interruptor 3</strong>.</li>
+            </ul>
+        </p>
+
+        <div class="switches">
+            <div class="switch" id="switch1" onclick="ligarInterrupTor(1)">
+                <i class="fas fa-toggle-off"></i>
+                <p>Interruptor 1</p>
+            </div>
+            <div class="switch" id="switch2" onclick="ligarInterrupTor(2)">
+                <i class="fas fa-toggle-off"></i>
+                <p>Interruptor 2</p>
+            </div>
+            <div class="switch" id="switch3" onclick="ligarInterrupTor(3)">
+                <i class="fas fa-toggle-off"></i>
+                <p>Interruptor 3</p>
+            </div>
+        </div>
+
+        <button onclick="verLuzes()">Ir para a sala das lâmpadas</button>
+
+        <div class="lights">
+            <div class="light" id="lamp1">
+                <i class="far fa-lightbulb"></i>
+                <p>Lâmpada 1</p>
+            </div>
+            <div class="light" id="lamp2">
+                <i class="far fa-lightbulb"></i>
+                <p>Lâmpada 2</p>
+            </div>
+            <div class="light" id="lamp3">
+                <i class="far fa-lightbulb"></i>
+                <p>Lâmpada 3</p>
+            </div>
+        </div>
+
+        <div class="logic-result" id="logicaResultado"></div>
+        <div class="result" id="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
